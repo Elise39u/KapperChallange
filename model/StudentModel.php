@@ -83,7 +83,8 @@ function createStudent()
 	
 	$db = openDatabaseConnection();
 
-	$sql = "INSERT INTO students(student_firstname, student_lastname, student_gender) VALUES (:firstname, :lastname, :gender)";
+	$sql = "INSERT INTO students(student_firstname, student_lastname, student_gender) 
+    VALUES (:firstname, :lastname, :gender)";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':firstname' => $firstname,
