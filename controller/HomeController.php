@@ -8,8 +8,7 @@ function index()
 
 function doLogin() {
     // Check if $_POST Not isset
-    if(!$_POST) {
-        die('Something is broke');
+    if(!$_POST || $_POST['password'] == '' || $_POST['mobile'] == '' || $_POST['name'] == '' ) {
         header("Location:" . URL . "error/index");
     } // Else continu
     else {
@@ -45,4 +44,8 @@ function startPage() {
 function logOut(){
     session_destroy();
     index();
+}
+
+function priceList() {
+    render("home/price");
 }
