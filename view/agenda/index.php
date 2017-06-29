@@ -1,7 +1,23 @@
-<div class="controller">
-    <div class="table">
-        <table>
+<!-- Tabel css and construct
+URL: https://codepen.io/venumadhavdiv/pen/eBYRZK -->
+<div class="controller" id="searchMe">
+    <label> Search function not working</label>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+        <table class="searchTable">
             <thead>
+            <?php if (isset($_SESSION['error']) && is_array($_SESSION['error']) && sizeof($_SESSION['error'])>0) {
+            echo '<div class="alert alert-danger alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Fout!</strong> <ul>';
+            foreach($_SESSION['error'] as $error) {
+                echo '<li>' . $error . '</li>';
+            }
+            echo '</ul></div>'; }
+            if (isset($_SESSION['message']) && is_array($_SESSION['message']) && sizeof($_SESSION['message'])>0) {
+            echo '<div class="alert alert-success alert-dismissable" id="alert-success-1"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Gelukt!</strong> <ul>';
+            foreach($_SESSION['message'] as $message) {
+                echo '<li>' . $message . '</li>';
+            }
+            echo '</ul></div>'; }?>
             <tr>
                 <th>#</th>
                 <th>datum</th>
@@ -41,8 +57,8 @@
         </table>
         <?php if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] == 'kapper') { ?>
-                <p class="middle"><a href="#"> Create appointment</a></p>
-            <?php }
+                <p class="middle"><a href="<?= URL ?>agenda/create"> Create appointment</a></p>
+            <?php unset($_SESSION['message'], $_SESSION['error']); }
         } ?>
     </div>
 </div>

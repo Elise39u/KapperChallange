@@ -6,6 +6,10 @@
 	<title>Studenten app</title>	
 	<link rel="stylesheet" href="<?= URL ?>css/style.css">
 
+    <!-- search script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="<?= URL ?>public/js/search.js" type="text/javascript"></script>
+
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"

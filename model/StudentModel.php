@@ -86,12 +86,16 @@ function createStudent()
 	$sql = "INSERT INTO students(student_firstname, student_lastname, student_gender) 
     VALUES (:firstname, :lastname, :gender)";
 	$query = $db->prepare($sql);
-	$query->execute(array(
+	if ($query->execute(array(
 		':firstname' => $firstname,
 		':lastname' => $lastname,
-		':gender' => $gender));
+		':gender' => $gender))) {
+        $db = null;
 
-	$db = null;
-	
-	return true;
+        return true;
+    } else {
+	    $_SESSION['error'][] = 'something went wrong possible 1067';
+	    unset($_SESSION['message']);
+	    return false;
+    }
 }

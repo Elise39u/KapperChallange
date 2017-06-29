@@ -1,5 +1,6 @@
 <?php
 
+// Get every appointment and sort the,
 function getAllAppointments()
 {
     $db = openDatabaseConnection();
@@ -26,4 +27,30 @@ function getKapperName() {
     $db = null;
 
     return $query->fetchAll();
+}
+
+// Create a new appointment
+function createAppointment($kapperid, $date, $start, $end) {
+    $db = openDatabaseConnection();
+    $start = date('Y-m-d H:i:s');
+    $end = date('Y-m-d H:i:s');
+    $sql = "INSERT INTO agenda(datum, start_tijd, eind_tijd, user_id) 
+    VALUES (:datum, :starttijd, :eindtijd, :userid)";
+    $query = $db->prepare($sql);
+    if($query->execute(array(
+        ':datum' => $date,
+        ':starttijd' => $start,
+        ':eindtijd' => $end,
+        ':userid' => $kapperid
+    ))) {
+        $db = null;
+        unset($_SESSION['error']);
+        $_SESSION['message'][] = 'Added successful';
+        return true;
+    }
+else {
+        $_SESSION['error'][] = 'something went wrong possible 1067';
+        unset($_SESSION['message']);
+        return false;
+    }
 }
