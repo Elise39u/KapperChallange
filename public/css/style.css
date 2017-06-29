@@ -1,0 +1,41 @@
+body {
+    font-family: arial;
+}
+
+.table {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+caption {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #777;
+    text-align: left;
+}
+th {
+    text-align: left;
+}
+table thead tr th, table tbody tr td, table tbody tr th{
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+
+}
+table thead tr th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+.right {
+    text-align: right;
+}
+
+.middle {
+    text-align: center
+}

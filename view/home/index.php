@@ -8,14 +8,14 @@ URL: https://codepen.io/JacobLett/pen/EPbZOr -->
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="first">Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="" id="first">
+                        <input type="text" name="name" class="form-control" placeholder="whole name" id="first">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="last">Adres</label>
-                        <input type="text" name="adres" class="form-control" placeholder="" id="last">
+                        <input type="text" name="adres" class="form-control" placeholder="adres" id="last">
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@ URL: https://codepen.io/JacobLett/pen/EPbZOr -->
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="company">ZIP code</label>
-                        <input type="text" name="zipcode" class="form-control" placeholder="">
+                        <input type="text" name="zipcode" class="form-control" placeholder="Zipcode">
                     </div>
                 </div>
 
