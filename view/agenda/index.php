@@ -1,5 +1,7 @@
 <!-- Tabel css and construct
-URL: https://codepen.io/venumadhavdiv/pen/eBYRZK -->
+URL: https://codepen.io/venumadhavdiv/pen/eBYRZK
+ Error handeling
+ URL: https://github.com/petersnoek/authchallenge/blob/master/view/templates/header.php line 50 t/m 76-->
 <div class="controller" id="searchMe">
     <label> Search function not working</label>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
