@@ -18,11 +18,9 @@ function getAllAppointments()
 function getKapperName() {
     $db = openDatabaseConnection();
 
-    $sql = "SELECT user.name FROM user LEFT JOIN agenda ON user.id=agenda.user_id WHERE user.name= :name LIMIT 1";
+    $sql = "SELECT user.name FROM user LEFT JOIN agenda ON user.id=agenda.user_id  LIMIT 1";
     $query = $db->prepare($sql);
-    $query->execute(array(
-        ':name' => $_SESSION['username']
-    ));
+    $query->execute();
 
     $db = null;
 

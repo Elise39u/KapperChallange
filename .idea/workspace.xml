@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de79b843-b020-4258-bfc3-e20ab6a0c960" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/AgendaModel.php" afterPath="$PROJECT_DIR$/model/AgendaModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/agenda/index.php" afterPath="$PROJECT_DIR$/view/agenda/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,12 +67,12 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/agenda/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="102" lean-forward="false" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
+            <state relative-caret-position="304">
+              <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
               <folding>
-                <marker date="1498753319972" expanded="true" signature="607:728" ph="..." />
-                <marker date="1498753319972" expanded="true" signature="691:698" ph="×" />
-                <marker date="1498753319972" expanded="true" signature="1151:1158" ph="×" />
+                <marker date="1498753944857" expanded="true" signature="607:728" ph="..." />
+                <marker date="1498753944857" expanded="true" signature="691:698" ph="×" />
+                <marker date="1498753944857" expanded="true" signature="1151:1158" ph="×" />
               </folding>
             </state>
           </provider>
@@ -90,15 +91,13 @@
       <file leaf-file-name="AgendaModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/AgendaModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="276">
+              <caret line="20" column="82" lean-forward="false" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
               <folding>
-                <marker date="1498752737953" expanded="true" signature="127:176" ph="SELECT * FRO... agenda" />
-                <marker date="1498752737953" expanded="true" signature="417:486" ph="SELECT FROM user" />
-                <marker date="1498752737953" expanded="true" signature="417:503" ph="SELECT user.... user" />
-                <marker date="1498752737953" expanded="true" signature="417:505" ph="SELECT user.... user" />
-                <marker date="1498752737953" expanded="true" signature="417:517" ph="SELECT user.... user" />
-                <marker date="1498752737953" expanded="true" signature="884:994" ph="INSERT INTO agenda... " />
+                <marker date="1498753691002" expanded="true" signature="127:176" ph="SELECT * FRO... agenda" />
+                <marker date="1498753691002" expanded="true" signature="417:486" ph="SELECT user.... user" />
+                <marker date="1498753691002" expanded="true" signature="417:495" ph="SELECT user.... user" />
+                <marker date="1498753691002" expanded="true" signature="809:919" ph="INSERT INTO agenda... " />
               </folding>
             </state>
           </provider>
@@ -161,8 +160,8 @@
         <option value="$PROJECT_DIR$/view/agenda/create.php" />
         <option value="$PROJECT_DIR$/controller/HomeController.php" />
         <option value="$PROJECT_DIR$/model/StudentModel.php" />
-        <option value="$PROJECT_DIR$/model/AgendaModel.php" />
         <option value="$PROJECT_DIR$/controller/AgendaController.php" />
+        <option value="$PROJECT_DIR$/model/AgendaModel.php" />
         <option value="$PROJECT_DIR$/view/agenda/index.php" />
       </list>
     </option>
@@ -486,12 +485,12 @@
       <workItem from="1498671548588" duration="283000" />
       <workItem from="1498724060903" duration="24000" />
       <workItem from="1498724103126" duration="729000" />
-      <workItem from="1498728891424" duration="11435000" />
+      <workItem from="1498728891424" duration="12058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26784000" />
+    <option name="totallyTimeSpent" value="27407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="754" extended-state="6" />
@@ -940,29 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/AgendaModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <marker date="1498752737953" expanded="true" signature="127:176" ph="SELECT * FRO... agenda" />
-            <marker date="1498752737953" expanded="true" signature="417:486" ph="SELECT FROM user" />
-            <marker date="1498752737953" expanded="true" signature="417:503" ph="SELECT user.... user" />
-            <marker date="1498752737953" expanded="true" signature="417:505" ph="SELECT user.... user" />
-            <marker date="1498752737953" expanded="true" signature="417:517" ph="SELECT user.... user" />
-            <marker date="1498752737953" expanded="true" signature="884:994" ph="INSERT INTO agenda... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/AgendaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -979,14 +955,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller/AgendaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/AgendaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="20" column="82" lean-forward="false" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+          <folding>
+            <marker date="1498753691002" expanded="true" signature="127:176" ph="SELECT * FRO... agenda" />
+            <marker date="1498753691002" expanded="true" signature="417:486" ph="SELECT user.... user" />
+            <marker date="1498753691002" expanded="true" signature="417:495" ph="SELECT user.... user" />
+            <marker date="1498753691002" expanded="true" signature="809:919" ph="INSERT INTO agenda... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/agenda/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="102" lean-forward="false" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
+        <state relative-caret-position="304">
+          <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
           <folding>
-            <marker date="1498753319972" expanded="true" signature="607:728" ph="..." />
-            <marker date="1498753319972" expanded="true" signature="691:698" ph="×" />
-            <marker date="1498753319972" expanded="true" signature="1151:1158" ph="×" />
+            <marker date="1498753944857" expanded="true" signature="607:728" ph="..." />
+            <marker date="1498753944857" expanded="true" signature="691:698" ph="×" />
+            <marker date="1498753944857" expanded="true" signature="1151:1158" ph="×" />
           </folding>
         </state>
       </provider>

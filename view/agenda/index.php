@@ -30,8 +30,9 @@ URL: https://codepen.io/venumadhavdiv/pen/eBYRZK
                     if ($_SESSION['role'] == 'kapper') { ?>
                         <th>Edit</th>
                         <th>Delete</th>
-                    <?php }
-                } ?>
+                    <?php } else { ?>
+                    <th> Reseveer</th>
+                <?php } }?>
             </tr>
             </thead>
             <tbody>
@@ -46,14 +47,14 @@ URL: https://codepen.io/venumadhavdiv/pen/eBYRZK
                 <?php foreach ($kapper as $holder) { ?>
                     <td><?php echo $holder['name'] ?></td>
                     <?php if (isset($_SESSION['role'])) {
-                        if ($_SESSION['role'] == 'kapper') { ?>
+                        if ($_SESSION['role'] == 'kapper') {?>
                             <td><a href="#"> Edit </a></td>
                             <td><a href="#"> Delete </a></td>
-                        <?php }
-                    }
-                } ?>
-                <?php $i++;
-                } ?>
+                        <?php } else { ?>
+                            <td><a href="#"> Reseveer</a></td>
+                   <?php } } ?>
+                <?php } $i++;
+                }?>
             </tr>
             </tbody>
         </table>
