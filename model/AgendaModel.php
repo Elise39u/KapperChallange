@@ -4,7 +4,7 @@ function getAllAppointments()
 {
     $db = openDatabaseConnection();
 
-    $sql = "SELECT * FROM agenda";
+    $sql = "SELECT * FROM agenda ORDER BY user_id DESC, datum";
     $query = $db->prepare($sql);
     $query->execute();
 
