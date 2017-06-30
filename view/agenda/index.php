@@ -49,7 +49,11 @@ URL: https://codepen.io/venumadhavdiv/pen/eBYRZK
                     <?php if (isset($_SESSION['role'])) {
                         if ($_SESSION['role'] == 'kapper') {?>
                             <td><a href="<?= URL ?>agenda/update/?id=<?php echo $appoint['id']; ?>"> Edit </a></td>
-                            <td><a href="<?= URL ?>agenda/delete/?id=<?php echo $appoint['id']; ?>"> Delete </a></td>
+                            <?php if ($appoint['gereserveerd'] == 'Ja') {?>
+                                <td><?php echo $appoint['gereserveerd'] ?></td>
+                                <?php } else { ?>
+                                <td><a href="<?= URL ?>agenda/delete/?id=<?php echo $appoint['id']; ?>"> Delete </a></td>
+                           <?php } ?>
                         <?php } else { ?>
                             <td><a href="<?= URL ?>agenda/inplannen/?id=<?php echo $appoint['id']; ?>"> Reseveer</a></td>
                    <?php } } ?>

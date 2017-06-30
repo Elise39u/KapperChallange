@@ -1,15 +1,14 @@
 <div class="container">
 
-    <h1>Mijn ingeplande afspraken</h1>
+    <h1>You`re appointments</h1>
 
     <table class="table">
         <tr>
             <th>Kapper</th>
             <th>Datum</th>
-            <th>Starttijd sessie</th>
-            <th>Eindtijd sessie</th>
+            <th>Starttijd</th>
+            <th>Eindtijd</th>
             <th>Status</th>
-
             <th>Actie</th>
         </tr>
 
@@ -23,8 +22,8 @@
                     <td><?=$plan['datum'];?></td>
                     <td><?=$plan['start_tijd'];?></td>
                     <td><?=$plan['eind_tijd'];?></td>
-                    <td><span class="label <?= $plan['gereserveerd']; ?>"><?= $plan['gereserveerd']; ?></span></td>
-                    <td><a href="<?= URL ?>planning/cancel/<?= $plan['id'] ?>">Afspraak afzeggen</a></td>
+                    <td><span class="label <?=$plan['gereserveerd']; ?>"><?= $plan['gereserveerd']; ?></span></td>
+                    <td><a href="<?= URL ?>agenda/cancel/?id=<?= $plan['id'] ?>">Afspraak afzeggen</a></td>
                 </tr>
                 <?php
             }

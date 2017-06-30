@@ -84,6 +84,22 @@ function inplannen() {
     header("Location:" . $previous_url);
 }
 
+function cancel() {
+    $id = getID();
+
+    // Turn $_SESSION["username"]) into a var
+    $userid = $_SESSION["username"];
+
+    $previous_url = $_SERVER['HTTP_REFERER'];
+    if (confirmPlanning($id)) {
+        $_SESSION['message'][] = 'The appointment has been cannceld';
+    } else {
+        $_SESSION['error'][] = 'Something went wrong';
+    }
+    header("Location:" . URL . "agenda/index");
+}
+
+
 function myPlanning() {
     render('agenda/myplanning', array(
         'checkapp' => getCustomerPlanning()

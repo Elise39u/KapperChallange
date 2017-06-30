@@ -115,18 +115,24 @@ function deleteAppointment($id) {
     }
 }
 
-function confirmPlanning($id, $userid) {
-
+function confirmPlanning($id, $userid = NULL) {
     $db = openDatabaseConnection();
     if ($userid == null) {
+        $userid = '';
         $sql = "UPDATE agenda SET customer = :customer,  gereserveerd = :gereserveerd WHERE id = :id";
         $query = $db->prepare($sql);
-        $query->execute(array(
+        if($query->execute(array(
             ':id' => $id,
             ':customer' => $userid,
             ':gereserveerd' => "Nee",
-        ));
-        $_SESSION['error'][] = 'Not be able to register for this';
+        ))) {
+            $db = null;
+            $_SESSION['message'][] = 'Appointment canceled successful ';
+            return true;
+        } else {
+            $_SESSION['error'][] = 'An error accursed';
+            return false;
+        }
     }else{
         $sql = "UPDATE agenda SET customer = :customer,  gereserveerd = :gereserveerd WHERE id = :id";
         $query = $db->prepare($sql);
