@@ -114,3 +114,48 @@ function deleteAppointment($id) {
         return false;
     }
 }
+
+function confirmPlanning($id, $userid) {
+
+    $db = openDatabaseConnection();
+    if ($userid == null) {
+        $sql = "UPDATE agenda SET customer = :customer,  gereserveerd = :gereserveerd WHERE id = :id";
+        $query = $db->prepare($sql);
+        $query->execute(array(
+            ':id' => $id,
+            ':customer' => $userid,
+            ':gereserveerd' => "Nee",
+        ));
+        $_SESSION['error'][] = 'Not be able to register for this';
+    }else{
+        $sql = "UPDATE agenda SET customer = :customer,  gereserveerd = :gereserveerd WHERE id = :id";
+        $query = $db->prepare($sql);
+        if($query->execute(array(
+            ':id' => $id,
+            ':customer' => $userid,
+            ':gereserveerd' => "Ja",
+        ))) {
+            $_SESSION['message'][] = 'Registerd succesful';
+            $db = null;
+                return true;
+        } else {
+            $_SESSION['error'][] = 'An Error has happend maby 1064';
+        }
+    }
+}
+
+function getCustomerPlanning()
+{
+    $db = openDatabaseConnection();
+    $sql = "SELECT * FROM agenda WHERE gereserveerd= :gereserveerd AND customer= :customer";
+    $query = $db->prepare($sql);
+    if($query->execute(array(
+        ':gereserveerd' => 'Ja',
+        ':customer' => $_SESSION['username']
+    ))) {
+    $db = null;
+    return $query->fetchAll();
+    } else {
+        return false;
+    }
+}

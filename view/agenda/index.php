@@ -51,7 +51,7 @@ URL: https://codepen.io/venumadhavdiv/pen/eBYRZK
                             <td><a href="<?= URL ?>agenda/update/?id=<?php echo $appoint['id']; ?>"> Edit </a></td>
                             <td><a href="<?= URL ?>agenda/delete/?id=<?php echo $appoint['id']; ?>"> Delete </a></td>
                         <?php } else { ?>
-                            <td><a href="#"> Reseveer</a></td>
+                            <td><a href="<?= URL ?>agenda/inplannen/?id=<?php echo $appoint['id']; ?>"> Reseveer</a></td>
                    <?php } } ?>
                 <?php } $i++;
                 }?>
@@ -61,8 +61,7 @@ URL: https://codepen.io/venumadhavdiv/pen/eBYRZK
         <?php if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] == 'kapper') { ?>
                 <p class="middle"><a href="<?= URL ?>agenda/create"> Create appointment</a></p>
-            <?php // Unset the message sessions
-                unset($_SESSION['message'], $_SESSION['error']); }
-        } ?>
+            <?php } // Unset the message sessions
+        } unset($_SESSION['message'], $_SESSION['error']);?>
     </div>
 </div>

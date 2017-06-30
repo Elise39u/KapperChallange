@@ -64,3 +64,28 @@ function deleteSure() {
     }
     header("Location:" . URL . "agenda/index");
 }
+
+// Function to plan in the customer
+function inplannen() {
+    //Get id
+    $id = getID();
+    // get the last known url
+    $previous_url = $_SERVER['HTTP_REFERER'];
+
+    // Turn $_SESSION["username"]) into a var
+    $userid = $_SESSION["username"];
+    // Check if the customer kan register
+    if (confirmPlanning($id, $userid)){
+    $_SESSION['message'][] = 'You have been registerd ';
+    } else {
+        $_SESSION['error'][] = 'Not be able to register';
+        var_dump($id, $userid);
+    }
+    header("Location:" . $previous_url);
+}
+
+function myPlanning() {
+    render('agenda/myplanning', array(
+        'checkapp' => getCustomerPlanning()
+    ));
+}

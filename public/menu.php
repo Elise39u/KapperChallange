@@ -11,7 +11,8 @@
     <li class="active" ><a data - toggle = "tab" href = "<?= URL ?>home/startPage" > Home</a ></li >
     <li ><a data - toggle = "tab" href = "<?= URL ?>home/priceList" > PriceList</a ></li >
     <li ><a data - toggle = "tab" href = "<?= URL ?>home/logOut" > Logout</a ></li >
-        <li ><a data - toggle = "tab" href = "<?= URL ?>agenda/index"> Agenda</a ></li >
+    <li ><a data - toggle = "tab" href = "<?= URL ?>agenda/index"> Agenda</a ></li >
+     <li ><a data - toggle = "tab" href = "<?= URL ?>agenda/myPlanning"> Planning</a ></li >
     </ul>
 <?php  } } ?>
 <!--
